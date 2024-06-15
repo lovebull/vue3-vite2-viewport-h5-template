@@ -26,6 +26,14 @@ const routes: Array<RouteRecordRaw> = [
           title: "视频"
         }
       },
+      {
+        path: "jdnutui",
+        name: "Jdnutui",
+        component: () => import("@/views/jd/index.vue"),
+        meta: {
+          title: "京东NutUI"
+        }
+      },
       // {
       //   path: "about",
       //   name: "About",

@@ -5,7 +5,8 @@
       "home": "首页",
       "tools": "工具",
       "about": "关于",
-      "video":"视频"
+      "video":"视频",
+      "jdnutui":"京东NutUI"
     },
     "details": {
       "vue3": "Vue3 + Vite4",

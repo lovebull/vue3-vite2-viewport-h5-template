@@ -5,7 +5,8 @@
       "home": "Home",
       "tools": "Tools",
       "about": "About",
-      "video":"Video"
+      "video":"Video",
+      "jdnutui":"JD-NutUI"
     },
     "details": {
       "vue3": "Vue3 + Vite4",

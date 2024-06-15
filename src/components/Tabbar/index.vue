@@ -31,6 +31,13 @@ const tabbarData = reactive([
     to: {
       name: "Tools"
     }
+  },
+  {
+    icon: "bag-o",
+    title: computed(() => $t("demo.tabbar.jdnutui")),
+    to: {
+      name: "Jdnutui"
+    }
   }
   // {
   //   icon: "user-o",

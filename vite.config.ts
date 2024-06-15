@@ -12,6 +12,9 @@ import viteCompression from "vite-plugin-compression";
 import { createHtmlPlugin } from "vite-plugin-html";
 import { enableCDN } from "./build/cdn";
 
+//nutui 京东 2024-06015
+import NutUIResolver from '@nutui/auto-import-resolver'
+
 // 当前工作目录路径
 const root: string = process.cwd();
 
@@ -28,7 +31,7 @@ export default defineConfig(({ mode }) => {
       // vant 组件自动按需引入
       Components({
         dts: "src/typings/components.d.ts",
-        resolvers: [VantResolver()]
+        resolvers: [VantResolver(),NutUIResolver()]
       }),
       // svg icon
       createSvgIconsPlugin({

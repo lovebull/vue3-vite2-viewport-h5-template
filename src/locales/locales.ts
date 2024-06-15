@@ -1,5 +1,5 @@
-import zhCNLocale from "./lang/zh-CN";
-import enLocale from "./lang/en";
+import zhCNLocale from "./lang/zh-CN.json";
+import enLocale from "./lang/en.json";
 
 const locales = {
   "zh-cn": zhCNLocale,

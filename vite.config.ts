@@ -14,6 +14,9 @@ import { enableCDN } from "./build/cdn";
 
 //nutui 京东 2024-06015
 import NutUIResolver from '@nutui/auto-import-resolver'
+//自定义图库unplugin-icons 2024-06015
+import Icons from "unplugin-icons/vite";
+import IconsResolver from 'unplugin-icons/resolver'
 
 // 当前工作目录路径
 const root: string = process.cwd();
@@ -31,7 +34,25 @@ export default defineConfig(({ mode }) => {
       // vant 组件自动按需引入
       Components({
         dts: "src/typings/components.d.ts",
-        resolvers: [VantResolver(),NutUIResolver()]
+        resolvers: [
+          VantResolver(),
+          NutUIResolver(),
+          IconsResolver({
+            /* options */
+            prefix: 'Icon',  // 自动引入的Icon组件统一前缀，默认为 i，设置false为不需要前缀
+              // {prefix}-{collection}-{icon} 使用组件解析器时，您必须遵循名称转换才能正确推断图标。<icon-ep-plus />
+            //没得问题i，正常展示
+            enabledCollections: ['ep','ri'],// 这是可选的，默认启用 Iconify 支持的所有集合['ep','ri']
+          }),
+        ]
+      }),
+      Icons({
+        scale: 1.2, // 缩放
+        autoInstall: true,  // 自动安装图标库
+        compiler: "vue3",
+          // defaultClass: '', // 默认类名
+        // defaultStyle: '', // 默认样式
+        
       }),
       // svg icon
       createSvgIconsPlugin({

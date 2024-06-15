@@ -30,21 +30,21 @@
 
 # 新增
 
+###### 2024-06-15
+
 1.新增NutUI-京东移动端组件库，增加自动按需引入
 
 2.导航栏目新增京东组件页面。增加京东NutUI组件视频组件演示
 
 3.Fix 修复，Vue-i18n组件库升级到最新版后，项目无法build的问题，引入./lang/zh-CN.json.需要文件名后缀。
 
-
+###### 2024-06-16
 
 1.集成unplugin-icons自定义图库。
 
 ##  增加使用自定义图标库
 
 - 推荐图标方案：[unplugin-icons](https://github.com/antfu/unplugin-icons)，它提供了按需引入 `iconify` 的方式。 
-
-- 
 
 - ```
   pnpm i -D unplugin-icons
